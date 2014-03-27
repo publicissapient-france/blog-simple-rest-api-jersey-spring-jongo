@@ -1,17 +1,16 @@
 package fr.xebia.blog.jerseyspring.business;
 
-import java.util.List;
+import org.jongo.MongoCollection;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import jersey.repackaged.com.google.common.collect.Lists;
 
 @Service
 class UserService {
 
-    public List<User> listAll() {
-        return Lists.newArrayList(
-                new User("Roger", "Couderc"),
-                new User("Pierre", "Albaladejo"),
-                new User("Serge", "Blanco")
-        );
+    @Autowired
+    private MongoCollection usersCollection;
+
+    public Iterable<User> listAll() {
+        return usersCollection.find().as(User.class);
     }
 }

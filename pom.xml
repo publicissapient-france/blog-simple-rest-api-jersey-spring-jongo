@@ -13,7 +13,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jersey.version>2.7</jersey.version>
         <servlet.version>3.0.1</servlet.version>
-        <jackson.version>2.3.2</jackson.version>
+        <jackson.version>2.1.4</jackson.version>
+        <jongo.version>1.0</jongo.version>
+        <mongo-java-driver.version>2.11.4</mongo-java-driver.version>
     </properties>
 
     <dependencyManagement>
@@ -51,6 +53,18 @@
             <groupId>com.fasterxml.jackson.jaxrs</groupId>
             <artifactId>jackson-jaxrs-json-provider</artifactId>
             <version>${jackson.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jongo</groupId>
+            <artifactId>jongo</artifactId>
+            <version>${jongo.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>${mongo-java-driver.version}</version>
         </dependency>
     </dependencies>
 
