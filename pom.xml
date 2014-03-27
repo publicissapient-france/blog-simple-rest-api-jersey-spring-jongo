@@ -66,6 +66,11 @@
             <artifactId>mongo-java-driver</artifactId>
             <version>${mongo-java-driver.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.glassfish.jersey.ext</groupId>
+            <artifactId>jersey-bean-validation</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

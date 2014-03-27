@@ -10,6 +10,10 @@ class UserService {
     @Autowired
     private MongoCollection usersCollection;
 
+    public void addUser(User newUser) {
+        usersCollection.update("{ email: '" + newUser.getEmail() + "'}").upsert().with(newUser);
+    }
+
     public Iterable<User> listAll() {
         return usersCollection.find().as(User.class);
     }
