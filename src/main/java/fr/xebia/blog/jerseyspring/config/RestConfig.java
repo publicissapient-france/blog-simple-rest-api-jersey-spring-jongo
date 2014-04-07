@@ -9,7 +9,7 @@ import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
 public class RestConfig extends ResourceConfig {
 
     public RestConfig() {
-        packages("fr.xebia.blog.jerseyspring.business");
+        packages("fr.xebia.blog.jerseyspring");
         property(ServerProperties.BV_SEND_ERROR_IN_RESPONSE, true);
         register(JacksonJsonProvider.class);
     }
