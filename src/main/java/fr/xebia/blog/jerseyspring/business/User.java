@@ -13,11 +13,11 @@ public class User {
 
     @Email
     @NotBlank
-    private String email;
+    protected final String email;
     @NotBlank
-    private String firstname;
+    private final String firstname;
     @NotBlank
-    private String lastname;
+    private final String lastname;
 
     @JsonCreator
     public User(@JsonProperty("email") String email,
@@ -26,9 +26,5 @@ public class User {
         this.email = email;
         this.firstname = firstname;
         this.lastname = lastname;
-    }
-
-    public String getEmail() {
-        return email;
     }
 }
